@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 
 import metalsmith from 'metalsmith';
+import redirect from 'metalsmith-redirect';
+import redirects from './redirects';
 import config from './config';
 
 export default function builder({ clean = true, middlewares }, cb) {
@@ -12,6 +14,7 @@ export default function builder({ clean = true, middlewares }, cb) {
     .clean(clean)
     .destination(config.docsDist)
     .use(middlewares)
+    .use(redirect(redirects))
     .build(err => {
       console.timeEnd('metalsmith build');
       cb(err);
