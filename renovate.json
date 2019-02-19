@@ -4,10 +4,10 @@
     ":automergeMinor",
     ":automergePr"
   ],
+  "ignorePresets": [
+    ":prHourlyLimit2"
+  ],
   "includeForks": true,
-  "force": {
-    "schedule": null
-  },
   "packageRules": [
     {
       "packagePatterns": [
