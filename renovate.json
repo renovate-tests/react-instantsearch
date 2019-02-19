@@ -4,6 +4,10 @@
     ":automergeMinor",
     ":automergePr"
   ],
+  "includeForks": true,
+  "force": {
+    "schedule": null
+  },
   "packageRules": [
     {
       "packagePatterns": [
